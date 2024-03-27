@@ -3,8 +3,6 @@ import unicodedata as ud
 import settings as glb
 from termcolor import colored
 
-# recognized_text=""
-
 
 def mitsos_listen():                        # convert speech to text so we can use the text for the next step
     if glb.config["local_listen"]:
