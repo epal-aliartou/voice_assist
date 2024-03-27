@@ -1,6 +1,3 @@
-# from a_globals import *
-# from a_utility import get_variable_name
-
 import settings as glb
 import m_dialog as dlg #import dialogos,find_keys_in_recognition,find_thema_everywhere,is_5_digit,initialize_var_dialogos
 from  m_TTS import mitsos_talk
@@ -8,7 +5,7 @@ from  m_STT import mitsos_listen
 from  m_agent import client,mqtt,start_mitsos_agent
 from  termcolor import colored
 
-def get_variable_name(var):                      # Iterate through the global symbol table to find the name of a variable
+def get_variable_name(var):                      
     for name, value in globals().items():
         if value is var:
             return name
@@ -60,7 +57,7 @@ def connect_to_mqtt():
 
 def write_dict2CSV(myDict,myFile='mycsvfile1.csv'):
     import csv
-    with open(myFile, 'w') as f:  # You will need 'wb' mode in Python 2.x
+    with open(myFile, 'w') as f:  
         w = csv.DictWriter(f, myDict.keys())
         w.writeheader()
         w.writerow(myDict)
@@ -74,8 +71,6 @@ def write_dict_of_dict_to_CSV(myDict):
             w.writeheader()
             w.writerow(value)        
       
-        # write_dict2CSV(value,str(i)+"-"+key+".csv")
-
 def write_dict_of_dict_to_CSVS(myDict):
     i=0
     for key,value in myDict.items():
@@ -85,12 +80,6 @@ def write_dict_of_dict_to_CSVS(myDict):
 def start_Dialog_or_Agent():
     dlg.initialize_var_dialogos()
     glb.initialize() # get_config_from_file() #print ("START===", commands,"START===", config) 
-    # dlg.initialize_var_dialogos()
-    # write_dict2CSV(dlg.dialogos)
-    # write_dict_of_dict_to_CSV(dlg.dialogos)
-    # print(glb.mathimata['ΛΕΙΤΟΥΡΓΙΚΑ ΣΥΣΤΗΜΑΤΑ']["ΘΕΜΑ 2"]+glb.mathimata['ΛΕΙΤΟΥΡΓΙΚΑ ΣΥΣΤΗΜΑΤΑ']["ΘΕΜΑ 4"])
-    # print(glb.mathimata['ΛΕΙΤΟΥΡΓΙΚΑ ΣΥΣΤΗΜΑΤΑ']["ΘΕΜΑ 2"])
-    # print(globals())
     if glb.config["i_am_server"]:
         if glb.config["remote_talk"] or glb.config["remote_command"] :connect_to_mqtt()
         start_mitsos_dialog()

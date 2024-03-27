@@ -6,22 +6,12 @@ from  m_TTS import mitsos_talk,os
 from  m_STT import mitsos_listen
 from  m_PC import go_to_sites
 import settings as glb # from  m_trapeza import *
-import locale          # from a_globals import *
-
-# print (paths['server']+paths[status["LESSON"]]+"BIBLIO.PDF" )
-# webbrowser.open("https://eclass.sch.gr/modules/document/file.php/0740110278/G-EPAL-DIKTYA/BIBLIO.pdf")
-# print (str([int(i) for i in "full 11 recognized_text 33".split() if i.isdigit()]))
-# glb.initialize()
-# glb.config["local_talk"]=True
-# mitsos_talk(datetime.datetime.now().strftime("%H:%M %p"))
-# print (datetime.datetime.now().strftime("%H:%M %p"))
-# print (datetime.datetime.now().strftime("%A %d %B %Y"))
-# mathimata=glb.mathimata
+import locale          
 
 def replace_all(repls, str):                                 
-    return re.sub('|'.join(re.escape(key) for key in repls.keys()),  # return re.sub('|'.join(repls.keys()), lambda k: repls[k.group(0)], str)    
+    return re.sub('|'.join(re.escape(key) for key in repls.keys()),      
                   lambda k: repls[k.group(0)], str) 
-                                                                    # text =  "i like apples, but pears scare me" # print replace_all({"apple": "pear", "pear": "apple"}, text)                                    
+                                                                                                       
 
 def month_replace(mydate):
     replacers = {'Ιανουάριος ':'Ιανουαρίου' , 'Φεβρουάριος' :'Φεβρουαρίου' , 'Μάρτιος' :'Μαρτίου' ,'Απρίλιος' :'Απριλίου' ,'Μάιος':'Μαΐου' , 'Ιούνιος':'Ιουνίου','Ιούλιος':'Ιουλίου','Αύγουστος':'Αυγούστου','Σεπτέμβριος':'Σεπτεμβρίου','Οκτώβριος':'Οκτωβρίου','Νοέμβριος':'Νοεμβρίου','Δεκέμβριος':'Δεκεμβρίου'} #etc....
