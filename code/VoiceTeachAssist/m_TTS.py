@@ -4,10 +4,6 @@ import os
 import settings as glb
 from termcolor import colored
 
-# print("...........................")
-# playsound("Audio/beep-027.mp3",True)
-
-# print (colored('hello', 'red'), colored('world', 'yellow'))
 def Print_dont_talk(text, mycolor="white"):
     print (colored(text, mycolor))
 
@@ -21,9 +17,5 @@ def mitsos_talk(text,mycolor="green"):                      # convert text to sp
     else:
         Print_dont_talk(text, mycolor)
 
-# Print_dont_talk("tttttttttttttt")
-# Print_dont_talk("tttttttttttttt","red")
-# Print_dont_talk("tttttttttttttt")
-# Print_dont_talk("tttttttttttttt","green")
 
 
