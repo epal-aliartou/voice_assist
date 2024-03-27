@@ -6,10 +6,10 @@
         "remote_talk": false,
         "local_command": true,
         "remote_command": true,
-        "mqtt-server": "192.168.1.78",
+        "mqtt-server": "URL_OR_IP_TO_YOUR_MQTT_SERVER",
         "mqtt-port": 1883,
-        "mqtt-user": "mqtt_user",
-        "mqtt-pwd": "mqtt_user1234",
+        "mqtt-user": "USER_TO_YOUR_MQTT_SERVER",
+        "mqtt-pwd": "PASSWORD_TO_YOUR_MQTT_SERVER",
         "mqtt-remote": false,
         "start-command": "cmnd",
         "room": "lab1",
@@ -21,7 +21,7 @@
         }
     },
     "math": {
-        "server": "https://eclass.sch.gr/modules/document/file.php/0740110278/",
+        "server": "URL_TO_YOUR_HTTP_OR_FILE_SERVER",
         "ΤΡΑΠΕΖΑ": "TRAPEZA/",
         "ΥΛΙΚΟ ΚΑΙ ΔΙΚΤΥΑ": {
             "PATH": "B-EPAL-YLIKO-DIKTYA/",
